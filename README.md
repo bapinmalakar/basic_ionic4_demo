@@ -24,7 +24,7 @@ words sorted by their repetition.
 9. Ionic back button.
 
 #Flow of pages
-App->Home->User-Interaction->Display---
-      ^                ^               | 
-      |_______________ | ______________|
+App->Home->User-Interaction->Display
+User-Interaction<-Display
+Home<-Display
       
