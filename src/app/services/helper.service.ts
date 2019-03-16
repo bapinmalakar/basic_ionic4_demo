@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 export class HelperService {
     constructor() { }
-    
+
     treatmentOnData(data) {
         return this.removeEmptySlot(data);
     }
@@ -17,7 +17,7 @@ export class HelperService {
                 filter_data.push(d);
             }
         });
-        return this.sortData(this.findFrequencyOfEachWord(filter_data));
+        return this.sortDataByFrequency(this.findFrequencyOfEachWord(filter_data));
     }
 
     findFrequencyOfEachWord(data) {
@@ -38,7 +38,7 @@ export class HelperService {
         return format_data;
     }
 
-    sortData(data) {
+    sortDataByFrequency(data) {
         let d = data;
         d.sort((a, b) => {
             if (a[1] < b[1]) {

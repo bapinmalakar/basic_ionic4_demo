@@ -1,7 +1,7 @@
 <ion-content padding>
   <div class="user-input">
     <ion-label position="fixed">{{('Hi, ' + user_name)|uppercase}}</ion-label>
-    <ion-input type="number" autofocus="true" placeholder="enter a number" [(ngModel)]="user_value"></ion-input>
+    <ion-input type="number" autofocus="true" placeholder="enter a number" [(ngModel)]="user_value" (keyup)="fetchData($event);"></ion-input>
     <ion-button color="dark" [disabled]="!user_value" (click)="fetchData();">Get Data</ion-button>
     <div class="loading" *ngIf="">
       <p>Loading, Wait....</p>

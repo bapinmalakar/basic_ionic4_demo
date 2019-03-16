@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DisplayPage implements OnInit {
-  valueIs: any[] = [];
-  user_value: number = 0;
+  valueIs: any[] = []; // sorted array by frequency
+  user_value: number = 0; // n enter by user
 
   constructor(private _storage: Storage, private _toastController: ToastController, 
     private _helper: HelperService, private navCtrl: NavController,private _navigate: Router) { }

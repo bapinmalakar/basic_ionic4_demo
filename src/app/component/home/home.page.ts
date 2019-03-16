@@ -10,7 +10,7 @@ export class HomePage {
   user_name: string = '';
   constructor(private _navigate: Router){}
 
-  navigateToHome(event: any = null) {
+  navigateToHome(event: any = null) { // handle enter entry also
     if(!event || (event && event.keyCode == 13 && this.user_name)) this._navigate.navigateByUrl('/user_interaction/' + this.user_name);
   }
 }

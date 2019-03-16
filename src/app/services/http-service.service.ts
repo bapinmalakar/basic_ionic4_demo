@@ -15,11 +15,6 @@ export class HttpServiceService {
     )
   }
 
-  extarctData(res: HttpResponse<any>) {
-    console.log('Response is: ', res);
-    return res;
-  }
-
   handleError(err: HttpErrorResponse) {
     console.log('Error is: ', err);
     return throwError(err);
