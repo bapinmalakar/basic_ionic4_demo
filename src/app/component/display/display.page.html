@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>{{('TOP '+ user_value + ' most frequency word are') | uppercase}}</h1>
+  <div *ngIf="valueIs.length">
+    <h2>Word and Frequency</h2>
+    <div *ngFor="let word of valueIs">
+      <p class="p1">{{word[0]}}</p>
+      <p class="p2">{{word[1]}}</p>
+    </div>
+  </div>
+</ion-content>

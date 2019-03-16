@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-input type="text" placeholder="Your Name Please" [(ngModel)]="user_name" autofocus="true" (keyup)="navigateToHome($event);"></ion-input>
+  <ion-button color="danger" expand="block" (click)="navigateToHome();" [disabled]="!user_name">Start App</ion-button>
+</ion-content>
